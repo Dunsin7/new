@@ -1,0 +1,17 @@
+  A[Exam Centre: Candidate Enrolment & Venue Organisation] --> B{Exam Type: Practical or Written?};
+    B -- Practical --> C[Practical Exam: Examiner Assesses Candidate];
+    B -- Written --> D[Exam Centre: Receives & Invigilates Written Exam];
+    D --> E[Exam Centre: Returns Completed Papers to Trinity];
+    C --> F[Marksheet Creation];
+    E --> F;
+    F --> G[Trinity Operations: Send Written Exams to Markers (Written Only)];
+    G --> H[Marker: Assesses & Records Marks (Written Only)];
+    H --> I[Marksheet Returned to Trinity];
+    I --> J[Trinity/Supplier: Data Entry of Results];
+    F --> J;
+    J --> K[Results Validation];
+    K --> L[Results Approval];
+    L --> M{Result: Pass or Higher?};
+    M -- Yes --> N[Certificate Generation];
+    M -- No --> O[End];
+    N --> O;
