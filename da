@@ -1,4 +1,10 @@
-  A[Exam Centre: Candidate Enrolment & Venue Organisation] --> B{Exam Type: Practical or Written?};
+ Exam Results Process Flowchart
+
+Here's a flowchart representing the exam results process:
+
+```mermaid
+graph TD
+    A[Exam Centre: Candidate Enrolment & Venue Organisation] --> B{Exam Type: Practical or Written?};
     B -- Practical --> C[Practical Exam: Examiner Assesses Candidate];
     B -- Written --> D[Exam Centre: Receives & Invigilates Written Exam];
     D --> E[Exam Centre: Returns Completed Papers to Trinity];
